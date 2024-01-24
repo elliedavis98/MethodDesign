@@ -45,7 +45,6 @@ class Student {
     //variables for the components of the student
     String firstName, lastName;
     private int ts1, ts2, ts3;
-    Course c1, c2, c3;
 
     //constructor for the student objects
     public Student(String firstName, String lastName, int ts1, int ts2, int ts3) {
@@ -80,28 +79,6 @@ class Student {
     public void setTs3(int ts3) {
         this.ts3 = ts3;
     }
-
-    // getters and setters to get the name of the courses
-    public Course getC1() {
-        return c1;
-    }
-
-    public Course getC2() {
-        return c2;
-    }
-    public Course getC3() {
-        return c3;
-    }
-    public void setC1(Course c1) {
-        this.c1 = c1;
-    }
-    public void setC2(Course c2) {
-        this.c2 = c2;
-    }
-
-    public void setC3(Course c3) {
-        this.c3 = c3;
-    }
     //method to compute the average of the students scores, called to in the toString
     public double getAverage() {
         return (ts1 + ts2 + ts3) / 3.0;
@@ -110,7 +87,7 @@ class Student {
     // toString to be print out information printed in the driver/main class
     public String toString() {
         String result;
-        result = "Student: " + firstName + " " + lastName + getC1() + getTs1() + "," + getC2() + geTts2() + "," + getC3() + getTs3()+ ", Average: "+ getAverage() + "\n";
+        result = "Student: " + firstName + " " + lastName + "English Score: " + getTs1() + "," + "Math Score: "+ geTts2() + "," + "Science: " + getTs3()+ ", Average: "+ getAverage() + "\n";
         return result;
     }
 
